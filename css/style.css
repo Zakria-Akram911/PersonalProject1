@@ -1,0 +1,1131 @@
+/* Generic CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: bold !important;
+  margin-bottom: 0 !important;
+}
+ul,
+li,
+ol {
+  list-style: none;
+  margin-bottom: 0 !important;
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  transition: all 0.4s ease-in-out;
+}
+header.active {
+  background: black;
+}
+
+.header-main {
+  display: flex;
+  max-width: 90%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+header.header-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav.nav-bar ul li {
+  display: inline-block;
+  padding: 30px 20px;
+}
+
+nav.nav-bar ul li a {
+  color: white;
+}
+
+.search-btn button {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.logo {
+  min-width: 20%;
+}
+
+.logo a img {
+  width: 40px;
+}
+
+nav.nav-bar {
+  width: 70%;
+  text-align: right;
+}
+
+.header-btn {
+  display: flex;
+  min-width: 10%;
+  gap: 20px;
+}
+
+.header-btn button {
+  font-size: 20px;
+  color: white;
+  font-size: 30px;
+}
+
+.hamburger button span {
+  background: white;
+  width: 15px;
+  height: 4px;
+  display: block;
+}
+
+.hamburger button {
+  background: transparent;
+  border: none;
+}
+
+.hamburger button span:nth-child(1) {
+  transform: translate(14px, 28px) rotate(45deg);
+}
+
+.hamburger button span:nth-child(2) {
+  transform: translate(13px, 4px) rotate(-45deg);
+}
+
+.hamburger button span:nth-child(3) {
+  transform: translate(-7px, 20px) rotate(135deg);
+}
+
+.hamburger button span:nth-child(4) {
+  transform: translate(-8px, -3px) rotate(45deg);
+}
+
+.search-btn {
+  padding: 0px 30px;
+}
+
+.banner {
+  background: url("/images/hero-image.png");
+  height: 85vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.banner-heading {
+  margin-top: 90px;
+}
+.banner-heading h1 {
+  color: white;
+  font-size: 70px;
+  text-transform: uppercase;
+  word-spacing: 5px;
+}
+
+.banner-btn button {
+  padding: 20px 30px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgba(247, 39, 39);
+  border: none;
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+}
+
+.banner-btn button::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  right: -10%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(247, 39, 39);
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  transform: skewX(-18deg);
+}
+
+.banner-btn button::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  left: -10%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(247, 39, 39);
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  transform: skewX(15deg);
+}
+
+section.app-store-products {
+  background: rgb(0, 0, 0, 0.8);
+}
+
+.app-store-products-main {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 8% 0px;
+}
+
+.app-store-products-heading {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+span.appstore-line-below {
+  display: block;
+  width: 13%;
+  height: 2px;
+  background: white;
+  position: relative;
+}
+
+span.appstore-line-below::after {
+  content: "";
+  width: 33%;
+  bottom: 0px;
+  right: 44%;
+  background: white;
+  height: 4px;
+  position: absolute;
+  transform: translate(50%, 50%) skewX(-60deg);
+}
+
+span.appstore-line-below::before {
+  content: "";
+  width: 33%;
+  bottom: 0px;
+  right: 56%;
+  background: white;
+  height: 4px;
+  position: absolute;
+  transform: translate(50%, 50%) skewX(60deg);
+}
+
+.app-store-products-heading h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.app-store-products-items-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.app-store-products-items-width {
+  text-align: center;
+}
+
+.app-store-products-items-width img {
+  display: block;
+}
+
+.app-store-products-items-width h4 {
+  color: white;
+  margin: 15px 0px 0px 0px;
+}
+
+.app-store-products-items-width button {
+  background: transparent;
+  border: none;
+  margin-top: 25px;
+}
+
+.dream-to-life-flex {
+  display: flex;
+}
+
+.dream-to-life-left {
+  width: 50%;
+}
+
+.dream-to-life-right {
+  width: 50%;
+  background: rgb(0, 0, 0, 1);
+  padding: 8% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dream-to-life-left img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+.dream-to-life-right h2 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.dream-to-life-right p {
+  color: white;
+  margin: 30px 0px;
+  opacity: 0.6;
+}
+
+.dream-to-life-right a {
+  color: white;
+  background: red;
+  width: 25%;
+  padding: 15px 0px;
+  text-align: center;
+}
+
+section.home-carousel {
+  background: rgb(0 0 0 / 93%);
+  padding: 8% 0%;
+}
+
+.carousel-inner.home-carousel-main {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.carousel-item.home-carousel-item h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.carousel-item.home-carousel-item p {
+  opacity: 0.5;
+  color: white;
+}
+
+.carousel-item.home-carousel-item h4 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.carousel-item.home-carousel-item {
+  text-align: center;
+}
+
+.carousel-item.home-carousel-item p:nth-child(2) {
+  margin: 5% 0%;
+}
+
+section.home-explore {
+  background: rgba(0, 0, 0, 0.94);
+}
+
+.home-explore-main {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.home-explore-left h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 60px;
+  max-width: 80%;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+span.robot-line-below {
+  display: block;
+  width: 22%;
+  height: 2px;
+  background: white;
+  position: relative;
+}
+
+span.robot-line-below::after {
+  content: "";
+  width: 33%;
+  bottom: 0px;
+  right: 44%;
+  background: white;
+  height: 4px;
+  position: absolute;
+  transform: translate(50%, 50%) skewX(-60deg);
+}
+
+span.robot-line-below::before {
+  content: "";
+  width: 33%;
+  bottom: 0px;
+  right: 56%;
+  background: white;
+  height: 4px;
+  position: absolute;
+  transform: translate(50%, 50%) skewX(60deg);
+}
+
+.home-explore-left {
+  width: 60%;
+}
+
+.home-explore-left p {
+  max-width: 70%;
+  margin: 30px 0px;
+  color: white;
+  opacity: 0.7;
+}
+
+.home-explore-left a {
+  color: white;
+  background: red;
+  padding: 15px 45px;
+}
+
+.home-explore-right {
+  padding-top: 8%;
+}
+
+.home-explore-right img {
+  width: 450px;
+}
+
+.home-video {
+  background: url("/images/h2-background-img-3.jpg");
+  padding: 8% 0%;
+  background-position: top;
+}
+
+.home-video-main {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.home-video-fancybox {
+  position: relative;
+}
+
+.home-video-fancybox {
+  background: url("/images/h2-video-img-1.jpg");
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+}
+
+.home-video-fancybox a {
+  font-size: 60px;
+  color: white;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.footer-main {
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer-links {
+  border-bottom: 7px solid black;
+  text-align: center;
+  padding: 4% 0%;
+}
+
+.footer-links ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.footer-links ul li a {
+  color: white;
+  font-weight: bold;
+}
+
+.footer-links ul {
+  margin: 0;
+}
+
+.footer-main::after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  width: 1px;
+  position: absolute;
+  background: black;
+  transform: skew(10deg);
+}
+
+.footer-main::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0px;
+  width: 1px;
+  position: absolute;
+  background: black;
+  transform: skew(-10deg);
+}
+
+.footer-social {
+  padding: 2% 0%;
+  text-align: center;
+}
+
+.footer-newsletter input {
+  width: 45%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+  padding: 10px 20px;
+  position: relative;
+}
+
+.footer-social-icons {
+  margin-top: 20px;
+}
+
+.footer-social-icons a {
+  color: white;
+  margin: 0px 10px;
+  font-size: 18px;
+}
+
+@media (min-width: 1565px) {
+  nav.nav-bar ul li {
+    padding: 40px 40px;
+  }
+
+  .search-btn {
+    padding: 0px 40px;
+  }
+  .footer-main::after {
+    transform: skew(20deg);
+  }
+
+  .footer-main::before {
+    transform: skew(-20deg);
+  }
+
+  .carousel-width-btn {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .banner-heading h1 {
+    font-size: 80px;
+  }
+
+  .banner {
+    background-position: center;
+    height: 60vh;
+  }
+
+  .app-store-products-items-width {
+    width: 25%;
+  }
+
+  .app-store-products-heading {
+    margin-bottom: 40px;
+  }
+
+  .dream-to-life-right {
+    padding: 11% 5%;
+  }
+
+  .home-explore-right img {
+    width: 550px;
+  }
+
+  .dream-to-life-right h2 {
+    font-size: 60px;
+  }
+
+  .home-video-main {
+    width: 70%;
+  }
+
+  .home-video-fancybox {
+    height: 600px;
+    background-size: cover;
+  }
+
+  .footer-links ul li {
+    padding: 0px 40px;
+  }
+}
+
+@media (min-width: 1900px) {
+  nav.nav-bar ul li {
+    padding: 50px 60px;
+  }
+
+  .search-btn {
+    padding: 0px 60px;
+  }
+  .banner {
+    height: 70vh;
+  }
+
+  .banner-heading h1 {
+    font-size: 100px;
+  }
+
+  .dream-to-life-right h2 {
+    font-size: 70px;
+  }
+
+  .home-explore-left h2 {
+    font-size: 80px;
+    padding-bottom: 40px;
+  }
+
+  .footer-links ul li {
+    padding: 0px 60px;
+  }
+
+  .footer-social {
+    padding: 3% 0%;
+  }
+}
+
+@media (max-width: 1365px) {
+  .hamburger button span {
+    width: 10px;
+  }
+
+  .hamburger button span:nth-child(1) {
+    transform: translate(11px, 25px) rotate(45deg);
+  }
+
+  .hamburger button span:nth-child(2) {
+    transform: translate(11px, 4px) rotate(-45deg);
+  }
+
+  .hamburger button span:nth-child(3) {
+    transform: translate(-5px, 16px) rotate(135deg);
+  }
+
+  .hamburger button span:nth-child(4) {
+    transform: translate(-6px, -4px) rotate(45deg);
+  }
+  .banner {
+    height: 51vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .banner-heading {
+    margin-top: 50px;
+  }
+
+  .app-store-products-main {
+    max-width: 80%;
+  }
+
+  .dream-to-life-left img {
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  .home-explore-main {
+    max-width: 85%;
+    padding-top: 10%;
+  }
+
+  .home-explore-left {
+    width: 70%;
+    padding-bottom: 8%;
+  }
+
+  .home-explore-right {
+    width: 40%;
+  }
+
+  .home-explore-right img {
+    width: 410px;
+  }
+
+  .home-explore-left p {
+    max-width: 90%;
+  }
+
+  .home-video-fancybox {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .home-video-main {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1023px) {
+  nav.nav-bar {
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 50%;
+    background: black;
+    z-index: 9;
+    left: -60%;
+    display: flex;
+    transition: 0.5s ease-in-out;
+    text-align: left;
+  }
+  nav.nav-bar.active {
+    left: -3px;
+  }
+
+  nav.nav-bar ul {
+    display: block;
+    margin: 120px 0px 0px 30px;
+  }
+
+  nav.nav-bar ul a {
+    display: block;
+    font-size: 22px;
+    padding-bottom: 30px;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    margin-left: 20px;
+  }
+
+  .hamburger button {
+    background: transparent;
+    border: 0px;
+    outline: none;
+  }
+  .hamburger button.active {
+    position: relative;
+    z-index: 99;
+  }
+
+  nav.nav-bar ul li {
+    display: block;
+    padding: 0;
+    margin: 10px 0px;
+  }
+
+  .logo {
+    order: 2;
+    width: 80%;
+    text-align: center;
+  }
+
+  .search-btn {
+    display: none;
+  }
+
+  .header-btn {
+    order: 1;
+  }
+
+  .hamburger button span {
+    width: 10px;
+  }
+
+  .hamburger button span:nth-child(1) {
+    transform: translate(11px, 16px) rotate(45deg);
+  }
+
+  .hamburger button span:nth-child(2) {
+    transform: translate(11px, -4px) rotate(-45deg);
+  }
+
+  .hamburger button span:nth-child(3) {
+    transform: translate(-5px, 9px) rotate(135deg);
+  }
+
+  .hamburger button span:nth-child(4) {
+    transform: translate(-6px, -11px) rotate(45deg);
+  }
+
+  .header-main {
+    padding: 15px 0px;
+  }
+  header.header-container {
+    background: black;
+  }
+
+  .banner {
+    height: 70vh;
+  }
+
+  .banner-heading h1 {
+    font-size: 50px;
+  }
+
+  .app-store-products-main {
+    max-width: 85%;
+  }
+
+  .app-store-products-items-flex {
+    flex-wrap: wrap;
+  }
+
+  .app-store-products-items-width {
+    width: 50%;
+    margin-bottom: 70px;
+  }
+
+  .app-store-products-heading h2 {
+    text-align: center;
+  }
+
+  .dream-to-life-flex {
+    flex-wrap: wrap;
+  }
+
+  .dream-to-life-left {
+    width: 100%;
+  }
+
+  .dream-to-life-right {
+    width: 100%;
+    padding: 10%;
+  }
+
+  .dream-to-life-right h2 {
+    max-width: 90%;
+  }
+
+  .home-explore-main {
+    max-width: 85%;
+    flex-wrap: wrap;
+  }
+
+  .home-explore-left {
+    width: 100%;
+  }
+
+  .home-explore-left p {
+    max-width: 90%;
+  }
+
+  .home-explore-right img {
+    width: 100%;
+  }
+
+  .home-explore-right {
+    padding-top: 10%;
+    width: 100%;
+  }
+
+  section.home-video {
+    padding: 10% 0%;
+  }
+
+  .home-video-main {
+    width: 75%;
+  }
+
+  .home-video-fancybox {
+    background-size: cover;
+  }
+
+  section.home-video {
+    background-size: cover;
+    background-position: right;
+  }
+
+  .footer-main::before {
+    display: none;
+  }
+
+  .footer-main::after {
+    content: none;
+  }
+
+  .footer-links {
+    border-bottom: none;
+  }
+
+  nav.footer-nav ul li {
+    padding: 0px 30px;
+    margin: 20px 0px;
+  }
+
+  .footer-newsletter input {
+    width: 70%;
+  }
+
+  span.appstore-line-below {
+    width: 23%;
+  }
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 14px;
+  }
+
+  nav.nav-bar {
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 70%;
+    background: black;
+    z-index: 9;
+    left: -70%;
+    display: flex;
+    transition: 0.5s ease-in-out;
+    text-align: left;
+  }
+  nav.nav-bar.active {
+    left: -3px;
+  }
+
+  nav.nav-bar ul {
+    display: block;
+    margin: 120px 0px 0px 30px;
+  }
+
+  nav.nav-bar ul a {
+    display: block;
+    font-size: 22px;
+    padding-bottom: 30px;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    margin-left: 20px;
+  }
+
+  .hamburger button {
+    background: transparent;
+    border: 0px;
+    outline: none;
+  }
+  .hamburger button.active {
+    position: relative;
+    z-index: 99;
+  }
+
+  nav.nav-bar ul li {
+    display: block;
+    padding: 0;
+    margin: 10px 0px;
+  }
+
+  .logo {
+    order: 2;
+    width: 80%;
+    text-align: center;
+  }
+
+  .search-btn {
+    display: none;
+  }
+
+  .header-btn {
+    order: 1;
+  }
+
+  .hamburger button span {
+    width: 10px;
+  }
+
+  .hamburger button span:nth-child(1) {
+    transform: translate(11px, 16px) rotate(45deg);
+  }
+
+  .hamburger button span:nth-child(2) {
+    transform: translate(11px, -4px) rotate(-45deg);
+  }
+
+  .hamburger button span:nth-child(3) {
+    transform: translate(-5px, 9px) rotate(135deg);
+  }
+
+  .hamburger button span:nth-child(4) {
+    transform: translate(-6px, -11px) rotate(45deg);
+  }
+
+  .header-main {
+    padding: 15px 0px;
+  }
+  header.header-container {
+    background: black;
+  }
+
+  .banner-heading h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .banner {
+    background-position: inherit;
+    height: 70vh;
+  }
+
+  .banner-btn button {
+    margin-top: 20px;
+  }
+
+  .app-store-products-heading h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .app-store-products-items-flex {
+    display: block;
+    margin-top: 0;
+  }
+
+  .app-store-products-items-width {
+    margin-top: 70px;
+    width: 100%;
+  }
+
+  .app-store-products-heading {
+    margin-bottom: 20px;
+  }
+
+  .dream-to-life-left {
+    width: 100%;
+  }
+
+  .dream-to-life-right {
+    width: 100%;
+    padding: 80px 30px;
+  }
+
+  .dream-to-life-right h2 {
+    font-size: 30px;
+  }
+
+  .dream-to-life-right p {
+    margin: 20px 0px;
+  }
+
+  .dream-to-life-right a {
+    width: 50%;
+  }
+
+  .home-explore-main {
+    flex-wrap: wrap;
+    max-width: 85%;
+  }
+
+  .home-explore-left {
+    width: 100%;
+  }
+
+  .home-explore-right img {
+    width: 100%;
+  }
+
+  .home-explore-left h2 {
+    max-width: 100%;
+    font-size: 40px;
+  }
+
+  .home-explore-left p {
+    max-width: 100%;
+  }
+
+  .home-explore-right {
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .home-video-fancybox {
+    height: 150px;
+    background-size: cover;
+  }
+
+  section.home-video {
+    padding: 20% 0%;
+    background-size: cover;
+  }
+
+  .home-video-main {
+    width: 80%;
+  }
+
+  .footer-main::before {
+    display: none;
+  }
+
+  .footer-main::after {
+    display: none;
+  }
+
+  nav.footer-nav ul li {
+    padding: 0px 8px;
+    margin: 20px 0px;
+  }
+
+  .footer-links {
+    border-bottom: none;
+  }
+
+  .footer-social {
+    padding: 5% 0%;
+  }
+
+  .footer-newsletter input {
+    width: 90%;
+  }
+
+  .dream-to-life-flex {
+    flex-wrap: wrap;
+  }
+
+  span.appstore-line-below {
+    width: 45%;
+  }
+
+  span.robot-line-below {
+    width: 40%;
+  }
+}
