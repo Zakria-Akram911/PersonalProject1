@@ -1128,4 +1128,25 @@ footer {
   span.robot-line-below {
     width: 40%;
   }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: none !important;
+  }
+
+  .carousel-item.home-carousel-item p:nth-child(2) {
+    margin: 8% 0%;
+  }
+
+  .carousel-inner.home-carousel-main {
+    width: 80%;
+  }
+
+  .carousel-item.home-carousel-item h2 {
+    font-size: 40px;
+  }
+
+  .carousel-item.home-carousel-item h4 {
+    font-size: 20px;
+  }
 }
