@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Rubik, sans-serif;
 }
@@ -30,6 +34,10 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   display: inline-block;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
 
 img {
@@ -61,6 +69,22 @@ header.header-container {
 nav.nav-bar ul li {
   display: inline-block;
   padding: 30px 20px;
+  position: relative;
+}
+
+nav.nav-bar ul li::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: rgba(247, 39, 39);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+nav.nav-bar ul li:hover::after {
+  display: block;
 }
 
 nav.nav-bar ul li a {
@@ -100,7 +124,7 @@ nav.nav-bar {
 
 .hamburger button span {
   background: white;
-  width: 15px;
+  width: 10px;
   height: 4px;
   display: block;
 }
@@ -111,11 +135,11 @@ nav.nav-bar {
 }
 
 .hamburger button span:nth-child(1) {
-  transform: translate(14px, 28px) rotate(45deg);
+  transform: translate(11px, 28px) rotate(45deg);
 }
 
 .hamburger button span:nth-child(2) {
-  transform: translate(13px, 4px) rotate(-45deg);
+  transform: translate(10px, 5px) rotate(-45deg);
 }
 
 .hamburger button span:nth-child(3) {
@@ -123,7 +147,7 @@ nav.nav-bar {
 }
 
 .hamburger button span:nth-child(4) {
-  transform: translate(-8px, -3px) rotate(45deg);
+  transform: translate(-8px, -2px) rotate(45deg);
 }
 
 .search-btn {
@@ -195,6 +219,7 @@ nav.nav-bar {
 
 section.app-store-products {
   background: rgb(0, 0, 0, 0.8);
+  /* background-image: url("/images/h2-background-img-3.jpg"); */
 }
 
 .app-store-products-main {
@@ -324,7 +349,7 @@ section.home-carousel {
 }
 
 .carousel-inner.home-carousel-main {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -355,7 +380,7 @@ section.home-carousel {
 }
 
 section.home-explore {
-  background: rgba(0, 0, 0, 0.94);
+  background: rgba(0, 0, 0, 0.97);
 }
 
 .home-explore-main {
@@ -431,6 +456,8 @@ span.robot-line-below::before {
 
 .home-video {
   background: url("/images/h2-background-img-3.jpg");
+  background: url("/images/h2-background-img-3.jpg");
+  background: url("/images/h2-background-img-3.jpg");
   padding: 8% 0%;
   background-position: top;
 }
@@ -446,7 +473,7 @@ span.robot-line-below::before {
 
 .home-video-fancybox {
   background: url("/images/h2-video-img-1.jpg");
-  height: 400px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,12 +503,13 @@ footer {
 
 .footer-links ul li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 25px;
 }
 
 .footer-links ul li a {
   color: white;
   font-weight: bold;
+  font-size: 15px;
 }
 
 .footer-links ul {
@@ -534,7 +562,71 @@ footer {
   font-size: 18px;
 }
 
-@media (min-width: 1565px) {
+section.dream-to-life {
+  box-shadow: 0px 8px rgb(0 0 0 / 20%);
+}
+
+.newsletter-icon button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 28%;
+}
+
+.footer-newsletter {
+  position: relative;
+}
+
+.top-nav-btn {
+  bottom: 20px;
+  right: 50px;
+  position: fixed;
+  z-index: 10;
+}
+
+.top-nav-btn a::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  right: -135%;
+  top: -7px;
+  height: 40px;
+  width: 30px;
+  background-color: rgba(247, 39, 39);
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  transform: skewX(-20deg);
+}
+
+.top-nav-btn a::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  right: 0%;
+  top: -7px;
+  height: 40px;
+  width: 30px;
+  background-color: rgba(247, 39, 39);
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  transform: skewX(21deg);
+}
+
+.top-nav-btn a {
+  position: relative;
+  color: white;
+}
+
+.banner-btn button {
+  box-shadow: 0px 3px rgb(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1400px) {
   nav.nav-bar ul li {
     padding: 40px 40px;
   }
@@ -598,7 +690,7 @@ footer {
   }
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 1750px) {
   nav.nav-bar ul li {
     padding: 50px 60px;
   }
@@ -834,7 +926,8 @@ footer {
   }
 
   .dream-to-life-right h2 {
-    max-width: 90%;
+    max-width: 60%;
+    font-size: 40px;
   }
 
   .home-explore-main {
@@ -899,6 +992,10 @@ footer {
 
   span.appstore-line-below {
     width: 23%;
+  }
+
+  .newsletter-icon button {
+    right: 15%;
   }
 }
 
@@ -1036,11 +1133,12 @@ footer {
 
   .dream-to-life-right {
     width: 100%;
-    padding: 80px 30px;
+    padding: 80px 50px;
   }
 
   .dream-to-life-right h2 {
     font-size: 30px;
+    max-width: 100%;
   }
 
   .dream-to-life-right p {
@@ -1048,7 +1146,7 @@ footer {
   }
 
   .dream-to-life-right a {
-    width: 50%;
+    width: 160px;
   }
 
   .home-explore-main {
@@ -1148,5 +1246,19 @@ footer {
 
   .carousel-item.home-carousel-item h4 {
     font-size: 20px;
+  }
+
+  .newsletter-icon button {
+    right: 5%;
+  }
+
+  .app-store-products-items-width a img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .app-store-products-items-width h4 {
+    margin: 20px 0px 5px 0px;
+    font-size: 18px;
   }
 }
